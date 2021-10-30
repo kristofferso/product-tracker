@@ -73,10 +73,9 @@ const run = async () => {
     const shopNames = changedShops.map((shop) => shop.name).join(", ");
     console.log("Changed Shops", shopNames);
     console.log("SENDER VARSEL");
-    axios.post(
-      "https://maker.ifttt.com/trigger/product_tracker/with/key/cn_kvYiYC7QgPlj7tlYM5r",
-      { value1: shopNames }
-    );
+    axios.post("https://maker.ifttt.com/trigger/your_ifft_token", {
+      value1: shopNames,
+    });
   }
   console.log("----------- SCRAPING OVER -----------");
 };
