@@ -1,0 +1,26 @@
+{
+  "name": "product-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fetch.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chromeless": "^1.5.2",
+    "jsdom": "^16.6.0",
+    "price-finder": "^5.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kristofferso/product-tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kristofferso/product-tracker/issues"
+  },
+  "homepage": "https://github.com/kristofferso/product-tracker#readme"
+}
