@@ -2,6 +2,7 @@ const { Chromeless } = require("chromeless");
 const { JSDOM } = require("jsdom");
 const axios = require("axios");
 const shopData = require("./shopData");
+require("dotenv").config();
 
 async function runBrowser(shop) {
   const chromeless = new Chromeless();
@@ -73,7 +74,7 @@ const run = async () => {
     const shopNames = changedShops.map((shop) => shop.name).join(", ");
     console.log("Changed Shops", shopNames);
     console.log("SENDER VARSEL");
-    axios.post("https://maker.ifttt.com/trigger/your_ifft_token", {
+    axios.post(`https://maker.ifttt.com/trigger/${process.env.IFTTT_EVENT}/with/key/${process.env.IFTTT_NOTIFICATION_KEY}`, {
       value1: shopNames,
     });
   }
